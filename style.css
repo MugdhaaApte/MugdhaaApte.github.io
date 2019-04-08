@@ -9,7 +9,7 @@ h1 {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0px 130px;
   overflow: hidden;
   box-shadow: 2px 7px 7px #D4D4D4;
   background-color: white;
@@ -35,7 +35,7 @@ li a {
   color: black;
   font-family: sans-serif;font-style: normal;font
   text-align:left;
-  padding: 30px 20px 50px 40px ;
+  padding: 30px 20px 60px ;
   text-decoration: none;
 }
 
