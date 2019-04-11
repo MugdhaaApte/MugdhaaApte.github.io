@@ -9,29 +9,30 @@ h1 {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0px 250px 0px;
-  overflow: hidden;
-  box-shadow: 2px 7px 7px #D4D4D4;
+  padding: 0px;
   background-color: white;
   width: 100%;
 }
 
 .logo {
   float: left;
-  padding: 15px 0px 0px 50px
+  padding: 20px 40px 0px 40px
 }
 
 nav {
   position: absolute;
   background-color: WHITE;
+  height: 75px;
   top: 0;
   left: 0;
   right:0;
+  box-shadow: 2px 4px 7px #3E3E3E;
 }
 
 li {
   float: left;
-  margin:left: 200px
+  padding-top:30px;
+  padding-left: 50px;
 }
 
 li a {
@@ -40,7 +41,7 @@ li a {
   font-family: sans-serif;
   font-style: normal;
   font text-align: left;
-  padding: 0px 20px 20px 10px;
+  padding: 0px 5px 5px 5px;
   text-decoration: none;
 }
 
@@ -58,4 +59,20 @@ nav a::after {
   font-weight: bold;
 }
 
+.myvideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+.content {
+  position: fixed;
+  padding-bottom: 0px;
+  padding-top: 500px;
+  padding-left: 750px;
 /* Change the link color to #111 (black) on hover */
