@@ -65,7 +65,7 @@ nav a:hover {
   color: #2AC29E
 }
 
-nav a::after {
+nav a:after {
   color: #2AC29E;
   font-weight: bold;
 }
@@ -155,9 +155,39 @@ font-family: sans-serif;
   padding-left: 40px;
 }
 
+.container div {
+  display: table-cell;
+}
 
 
-.text {
+.overlay-container {
+  position: relative;
+  width: 141px;
+  display: table-cell;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overlay-container .image {
+  display: block;
+}
+
+.overlay-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 0.3;
+}
+
+.overlay-container .text {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -167,11 +197,6 @@ font-family: sans-serif;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.container img{
-  opacity: 30;
-  padding-left: 10px;
 }
 
 
