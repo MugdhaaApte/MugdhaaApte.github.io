@@ -65,7 +65,7 @@ nav a:hover {
   color: #2AC29E
 }
 
-nav a:after {
+nav a:active {
   color: #2AC29E;
   font-weight: bold;
 }
@@ -102,6 +102,20 @@ nav a:after {
   margin-top:20px;
 }
 
+.mediacolumn {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  margin-top:95px;
+}
+
+.mediaimages div{
+  display: table-cell;
+  float:left;
+padding-right: 20px;
+padding-top: 15px;
+}
+
 .para1{
   padding-left: 30px;
   padding-right: 60px;
@@ -111,8 +125,9 @@ nav a:after {
   font-weight: lighter;
 }
 
-.para2{
 
+
+.para2{
   padding-right: 95px;
   font-family:sans-serif;
   font-size: 16px;
@@ -137,13 +152,21 @@ nav a:after {
   font-weight: bold;
 }
 
+.mediaheading1 h2 span{
+  background:#2AC29E;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 150px;
+  color:white;
+}
+
 .para2 ul{
   padding-bottom: 15px;
 
 }
 
 .awards li{
-  font-size: 18px;
+font-size: 18px;
 font-weight: bold;
 font-family: sans-serif;
 }
@@ -156,7 +179,7 @@ font-family: sans-serif;
 }
 
 .container div {
-  display: table-cell;
+display: table-cell;
 }
 
 
@@ -198,6 +221,9 @@ font-family: sans-serif;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+
+
 
 
 
