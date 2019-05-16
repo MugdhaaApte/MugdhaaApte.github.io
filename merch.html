@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <title>Imagine Dragons</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/myjs.js/Logo.jpg">
+      </a>
+    </div>
+
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="discography.html">Discography</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a class="active" href="#merch">Merch</a></li>
+      <li><a href="tourdates.html">Tour Dates</a></li>
+    </ul>
+  </nav>
+
+  <div id="myBtnContainer" class="buttons">
+  <button class="btn filteractive" onclick="filterSelection('all')"> SHOW ALL</button>
+
+  <button class="btn" onclick="filterSelection('Topwear')"> TOPWEAR</button>
+  <button class="btn" onclick="filterSelection('Bottomwear')"> BOTTOMWEAR</button>
+  <button class="btn" onclick="filterSelection('Accessories')"> ACCESSORIES</button>
+  </div>
+
+  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+  <div class="mcontainer">
+  <div class="filterDiv Topwear">
+  <img src="img/myjs.js/merch/topwear1.png">
+  <img src="img/myjs.js/merch/topwear2.png">
+  <img src="img/myjs.js/merch/topwear3.png">
+  </div>
+  <div class="filterDiv Bottomwear">
+  <img src="img/myjs.js/merch/bottomwear1.png">
+  </div>
+  <div class="filterDiv Accessories">
+    <img src="img/myjs.js/merch/accessories1.png">
+  </div>
+
+  </div>
+
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+  w3RemoveClass(x[i], "show");
+  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+  }
+
+  // Show filtered elements
+  function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+  if (arr1.indexOf(arr2[i]) == -1) {
+    element.className += " " + arr2[i];
+  }
+  }
+  }
+
+  // Hide elements that are not selected
+  function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+  while (arr1.indexOf(arr2[i]) > -1) {
+    arr1.splice(arr1.indexOf(arr2[i]), 1);
+  }
+  }
+  element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current control button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("filteractive");
+  current[0].className = current[0].className.replace(" filteractive", "");
+  this.className += " filteractive";
+  });
+  }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
